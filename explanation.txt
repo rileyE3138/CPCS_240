@@ -1,0 +1,7 @@
+I tested my code in 5 main ways
+I liked to use https://www.online-java.com/ to quickly bug test small simple things. It's great for small things like double checking small parts of your code to ensure they are working correctly.
+I like to add one line comments for each small component. That way if there is a mistake in my logic it becomes easier to spot it. 
+While writing code I will often add Outprints for every step that way as many mistakes are caught  as soon as possible, and before I move onto something else.
+To test it against multiple types of files I created my own versions of the data file containing possible mistakes or odd collections of data. For example testing the minimum possible campus(1 location, 0 Doors, 0 Items) and ensuring it can handle it
+Debugging feature. Using breakpoints makes it incredibly easy to check things like if a loop is exiting late or too soon.
+
