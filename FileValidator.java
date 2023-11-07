@@ -8,6 +8,9 @@ import java.util.Scanner;
 
 @Deprecated
 public class FileValidator {
+	/*
+	 * I hereby declare upon my word of honor that I have neither given nor received unauthorized help on this work
+	 */
 /**
  * 
  * @param CampusReader the Scanner containing the data file

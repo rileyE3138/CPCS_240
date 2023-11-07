@@ -3,6 +3,9 @@ package main;
 import java.util.*;
 
 public class Campus {
+	/*
+	 * I hereby declare upon my word of honor that I have neither given nor received unauthorized help on this work
+	 */
 	private String campusName;
 	/*
 	 * for holding the list of locations
@@ -27,6 +30,7 @@ public void newLocation(Location newLoc) {
 	Locations.put(newLoc.getName(), newLoc);
 }
 /**
+ * @param the name of the location you want to get
  * @return a specific locations
  */
 public Location getLocation(String locName) {
@@ -39,7 +43,7 @@ public Hashtable<String, Location> getAllLocations() {
 	return Locations;
 }
 /**
- * @param Location newLoc sets which location will be saved as the starting location
+ * @param newLoc sets which location will be saved as the starting location
  */
 public void SetStartingLocation(Location newLoc) {
 	startingLocation = newLoc;

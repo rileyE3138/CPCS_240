@@ -1,6 +1,9 @@
 package main;
 
 public class PickupCommand implements UserInputCommand {
+	/*
+	 * I hereby declare upon my word of honor that I have neither given nor received unauthorized help on this work
+	 */
 String ItemName;
 /**
  * 
@@ -17,6 +20,7 @@ public String carryOut(TourStatus ts){
 	if(ts.getCurLocation().getItemNamed(ItemName) != null) {
 		//picks up the item
 		ts.addToBackpack(ts.getCurLocation().getItemNamed(ItemName));
+		ts.getCurLocation().removeItem(ts.getCurLocation().getItemNamed(ItemName));
 		//shows the current list of items in the backpack
 		return ts.listItemsInBackpack();
 	}

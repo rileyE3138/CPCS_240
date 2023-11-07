@@ -1,11 +1,11 @@
 package main;
 
 import java.util.*;
-/**
- * I hereby declare upon my word of honor that I have neither given nor received unauthorized help on this work
- */
 
  public class Location {
+	 /*
+	  * I hereby declare upon my word of honor that I have neither given nor received unauthorized help on this work
+	  */
 //used for holding the name and description for the location
 private String name = "";
 private String description = "";
@@ -126,15 +126,14 @@ public String getDoors() {
  */
 public void removeItem(Item item) {
 	 Enumeration<Item> e = Collections.enumeration(items);
-	 //could be more efficient 
 	 int count = 0;
 	 while(e.hasMoreElements()) {
 		 if(e.nextElement() == item) {
 		 items.remove(count);
+		 //stops us from continuing to scan for no reason
+		 break;
 		 }
-		 else {
-			 count++;
-		 }
+		 count++;
 	 }
 }
 /**
