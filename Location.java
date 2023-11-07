@@ -126,15 +126,14 @@ public String getDoors() {
  */
 public void removeItem(Item item) {
 	 Enumeration<Item> e = Collections.enumeration(items);
-	 //could be more efficient 
 	 int count = 0;
 	 while(e.hasMoreElements()) {
 		 if(e.nextElement() == item) {
 		 items.remove(count);
+		 //stops us from continuing to scan for no reason
+		 break;
 		 }
-		 else {
-			 count++;
-		 }
+		 count++;
 	 }
 }
 /**

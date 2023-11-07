@@ -1,6 +1,9 @@
 package main;
 import java.util.*;
 import java.io.*;
+/**
+ * I hereby declare upon my word of honor that I have neither given nor received unauthorized help on this work
+ */
 public class TourUMW {
 	public static void main(String[] args) {
 		/*
@@ -9,16 +12,17 @@ public class TourUMW {
 		 * @version 2.1
 		 */
 		Scanner UserInput =  new Scanner(System.in);
-		String input = "";
+		String input = "" ;
 		TourStatus TourManager = new TourStatus();
+		TourUMW tourUMW = new TourUMW();
 		//s allows the user to try to load a file multiple times if the mess it up the first time
 		Boolean s = false;
 			while(!s){
 			try {
-				input = UserInput.nextLine();
 				System.out.println("please enter the name of the tour File");
+				input = UserInput.nextLine();
 				//attempts to build the TourStatus Object
-				TourManager.setCampus(setUpCampus(new Scanner(new File(input + ".txt "))));
+				TourManager.setCampus(tourUMW.setUpCampus(new Scanner(new File(input + ".txt "))));
 				//sets the starting location
 				TourManager.setCurLocation(TourManager.getCampus().getStartingLoc());
 				s = true;
@@ -36,7 +40,7 @@ public class TourUMW {
 			//we need to show the startingloc data before starting the tour;
 			System.out.println(TourManager.getInfo(TourManager.getCurLocation()));
 			//default is backPackCommand since it shows the backpack begins empty
-			for(UserInputCommand command = new BackpackCommand(); command != null; command = PromptUser(UserInput)) {
+			for(UserInputCommand command = new BackpackCommand(); command != null; command = tourUMW.PromptUser(UserInput)) {
 				System.out.println(command.carryOut(TourManager) + "");	
 			}
 			
@@ -46,7 +50,7 @@ public class TourUMW {
 	 * @param Input the scanner used to get the input from the user.
 	 * @return returns the command the user selected it then just needs to be carried out
 	 */
-public static UserInputCommand PromptUser(Scanner Input) {
+public UserInputCommand PromptUser(Scanner Input) {
 	//saves the input as a string so we can compare to it later
 	// the prompt for the user is handled outside the method that way it can be controlled
 	String input = Input.nextLine();
@@ -95,7 +99,7 @@ public static UserInputCommand PromptUser(Scanner Input) {
  * @param reader the scanner that holds the data for the campus
  * @return Campus returns all the extracted data for the campus as a Campus Object
  */
-public static Campus setUpCampus(Scanner reader) {
+public Campus setUpCampus(Scanner reader) {
 	//where we store the campus data before returning it
 	Campus campus = new Campus();
 	/*

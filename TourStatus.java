@@ -1,7 +1,9 @@
 package main;
 
 import java.util.ArrayList;
-
+/**
+ * I hereby declare upon my word of honor that I have neither given nor received unauthorized help on this work
+ */
 public class TourStatus {
 	private Campus campus;
 	//used for holding the current location of the tour

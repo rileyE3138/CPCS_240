@@ -1,5 +1,7 @@
 package main;
-
+/**
+ * I hereby declare upon my word of honor that I have neither given nor received unauthorized help on this work
+ */
 public class DropCommand implements UserInputCommand {
 private String ItemName = "";
 /**

@@ -3,7 +3,9 @@
  * instead of a separate System just for ensuring the text file has the correct formatting
  */
 package main;
-
+/**
+ * I hereby declare upon my word of honor that I have neither given nor received unauthorized help on this work
+ */
 import java.util.Scanner;
 
 @Deprecated

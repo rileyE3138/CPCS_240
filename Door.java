@@ -1,7 +1,7 @@
-/*
- * “I hereby declare upon my word of honor that I have neither given nor received unauthorized help on this work."
- */
 package main;
+/**
+ * I hereby declare upon my word of honor that I have neither given nor received unauthorized help on this work
+ */
 public class Door {
 private Location leavingLocation;
 private Location enteringLocation;
