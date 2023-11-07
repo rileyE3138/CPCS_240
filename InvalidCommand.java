@@ -24,6 +24,6 @@ public class InvalidCommand implements UserInputCommand {
 				+ "\n b (use to show items in your backpack)"
 				+ "\n (n,e,s,w) use to move to a new location"
 				+ "\n q(use to exit the tour)" 
-				+ "\n\n" + TS.getInfo(TS.getCurLocation());
+				+ "\n\n" + ts.getInfo(ts.getCurLocation());
 	}
 }
