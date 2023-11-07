@@ -1,10 +1,10 @@
 package main;
 
 import java.util.ArrayList;
-/**
- * I hereby declare upon my word of honor that I have neither given nor received unauthorized help on this work
- */
 public class TourStatus {
+	/*
+	 * I hereby declare upon my word of honor that I have neither given nor received unauthorized help on this work
+	 */
 	private Campus campus;
 	//used for holding the current location of the tour
 	private Location CurLocation = new Location();
@@ -26,13 +26,13 @@ public class TourStatus {
 			this.campus = campus;
 	}
 	/**
-	 * @returns returns the current version of the campus
+	 * @return returns the current version of the campus
 	 */
 	public Campus getCampus() {
 		return campus;
 	}
 	/**
-	 * @param Curlocation sets the current location
+	 * @param CurLocation sets the current location
 	 */
 	public void setCurLocation(Location CurLocation) {
 		this.CurLocation = CurLocation;
@@ -84,13 +84,15 @@ public class TourStatus {
 		}
 	}
 	/** 
-	 * @param moves the the first item found with that name in the CurLocation to the backpack
+	 * @param name moves the the first item found with that name in the CurLocation to the backpack
+	 * @return returns the item that was picked up
 	 */
 	public Item pickUpItemFromLocation(String name) {
 		return CurLocation.getItemNamed(name);
 	}
 	/** 
-	 * @param moves the the first item found with that name in the CurLocation to the backpack
+	 * @param name moves the the first item found with that name in the CurLocation to the backpack
+	 * @return returns the item that was dropped
 	 */
 	public Item DropItemFromBackpack(String name) {
 		//looks through backpack
@@ -115,7 +117,7 @@ public class TourStatus {
 		return toString;		
 	}
 	/**
-	 * @param direction changes the current location based off of what direction is given
+	 * @param dir direction changes the current location based off of what direction is given
 	 */
 	public void UpdateTourLocation(char dir) { 
 			//if bad dir, or bad file is given, then we want to alert the user to the problem

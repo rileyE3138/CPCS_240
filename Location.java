@@ -1,11 +1,11 @@
 package main;
 
 import java.util.*;
-/**
- * I hereby declare upon my word of honor that I have neither given nor received unauthorized help on this work
- */
 
  public class Location {
+	 /*
+	  * I hereby declare upon my word of honor that I have neither given nor received unauthorized help on this work
+	  */
 //used for holding the name and description for the location
 private String name = "";
 private String description = "";

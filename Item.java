@@ -1,9 +1,10 @@
 package main;
 import java.util.*;
-/**
- * I hereby declare upon my word of honor that I have neither given nor received unauthorized help on this work
- */
+
 public class Item {
+	/*
+	 * I hereby declare upon my word of honor that I have neither given nor received unauthorized help on this work
+	 */
 private String name;
 private String message;
 Item(){}

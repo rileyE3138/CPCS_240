@@ -1,8 +1,8 @@
 package main;
-/**
- * I hereby declare upon my word of honor that I have neither given nor received unauthorized help on this work
- */
 public class Door {
+	/*
+	 * I hereby declare upon my word of honor that I have neither given nor received unauthorized help on this work
+	 */
 private Location leavingLocation;
 private Location enteringLocation;
 //is set to X to make error detection easier
@@ -27,13 +27,13 @@ public String describe() {
 	return "\n if you go (" + direction + ") you will arrive at " + enteringLocation.getName();
 }
 /**
- *@returns returns the leaving locations name
+ *@return returns the leaving locations name
  */
 public Location getLeaving() {
 	return leavingLocation;
 }
 /**
- * @param LeavingLocation sets the name of leavingLocation for the door
+ * @param leavingLocation sets the name of leavingLocation for the door
  */
 public void setLeaving(Location leavingLocation) {
 	this.leavingLocation = leavingLocation;
@@ -45,13 +45,13 @@ public Location getEntering() {
 	return enteringLocation;
 }
 /**
- * @param ArrivalLocation sets the name of the Arrival Location
+ * @param enteringLocation sets the name of the Arrival Location
  */
 public void setEntering(Location enteringLocation) {
 	this.enteringLocation = enteringLocation;
 }
 /**
- * @param C sets the direction of the door
+ * @param dir sets the direction of the door
  */
 public void setDirection(String dir) {
 	direction = dir;
