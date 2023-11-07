@@ -9,13 +9,13 @@ public class TourUMW {
 		 * @version 2.1
 		 */
 		Scanner UserInput =  new Scanner(System.in);
-		String input;
+		String input = "";
 		TourStatus TourManager = new TourStatus();
 		//s allows the user to try to load a file multiple times if the mess it up the first time
 		Boolean s = false;
 			while(!s){
-			input = UserInput.nextLine();
 			try {
+				input = UserInput.nextLine();
 				System.out.println("please enter the name of the tour File");
 				//attempts to build the TourStatus Object
 				TourManager.setCampus(setUpCampus(new Scanner(new File(input + ".txt "))));
